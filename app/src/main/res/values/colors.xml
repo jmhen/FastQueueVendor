@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F22A82</color>
+    <color name="colorPrimaryDark">#5E1334</color>
+    <color name="colorSecondary">#E989B3</color>
+    <color name="colorTertiary">#EBBACF</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="yellow">#FFC107</color>
+    <color name="colorFQ">#F22A82</color>
+    <color name="fqTheme">#F22A82</color>
+    <color name="fqThemeDark">#F22A82</color>
+    <color name="fqBackgroundWhite">#FFFFFF</color>
+    <!--<color name="fqLayoutBackground">#87CEFA</color>-->
+    <color name="TextColor">#222222</color>
+    <color name="ErrorTextColor">#FF0000</color>
+    <color name="CurrentTab">#F22780</color>
+    <color name="transparent">@android:color/transparent</color>
+</resources>

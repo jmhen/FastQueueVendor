@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/preorder_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <!--INNER CONTENT-->
+        <LinearLayout
+            android:id="@+id/page_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--PAGE TITLE-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/page_title"
+                android:gravity="left|center"
+                android:paddingLeft="28dp"
+                android:text="Preorder"
+                android:textColor="@color/fqBackgroundWhite"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/preorder_count_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/m20"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="@dimen/m20"
+                android:background="@android:drawable/btn_dropdown"
+                android:hint="@string/numOfPreorders"
+                android:spinnerMode="dropdown" />
+
+            <Spinner
+                android:id="@+id/preorder_deadline_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/m20"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="@dimen/m20"
+                android:background="@android:drawable/btn_dropdown"
+                android:hint="@string/deadlineOfPreorders"
+                android:spinnerMode="dropdown" />
+
+            <Button
+                android:id="@+id/preorder_button"
+                android:layout_width="@dimen/ok_button_width"
+                android:layout_height="@dimen/ok_button_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:background="@color/fqTheme"
+                android:text="Go!"
+                android:textColor="@color/fqBackgroundWhite"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <!--NAVIGATION BAR-->
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/preorder_inprogress"
+        style="@style/AppTheme"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fqTheme"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        tools:context=".PreorderMain">
+
+        <!--PREORDER-IN-PROGRESS-->
+        <LinearLayout
+            android:layout_width="@dimen/card_width"
+            android:layout_height="@dimen/card_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@color/fqBackgroundWhite"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/number_of_preorders"
+                android:textColor="@color/fqTheme"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/preorder_ordercount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/fqTheme"
+                android:textSize="50sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/time_left"
+                android:textColor="@color/fqTheme"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/preorder_timeleft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="0 mins"
+                android:textColor="@color/fqTheme"
+                android:textSize="50sp" />
+
+            <Button
+                android:id="@+id/preorder_stop_button"
+                android:layout_width="@dimen/ok_button_width"
+                android:layout_height="@dimen/ok_button_height"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/fqTheme"
+                android:text="@string/stop_preorder"
+                android:textColor="@color/fqBackgroundWhite"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/preorder_timereached"
+        style="@style/AppTheme"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fqTheme"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        tools:context=".PreorderMain">
+
+        <!--PREORDER-TIME-REACHED-->
+        <LinearLayout
+            android:layout_width="@dimen/card_width"
+            android:layout_height="@dimen/card_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@color/fqBackgroundWhite"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <Button
+                android:id="@+id/preorder_closeButton_timereached"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:background="@mipmap/close_button1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="60dp"
+                android:text="@string/preorder_time_is_up"
+                android:textColor="@color/fqTheme"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal|top"
+                android:text="@string/you_can_continue_preparations"
+                android:textColor="@color/fqTheme"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/preorder_countreached"
+        style="@style/AppTheme"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fqTheme"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        tools:context=".PreorderMain">
+
+        <!--PREORDER-COUNT-REACHED-->
+        <LinearLayout
+            android:layout_width="@dimen/card_width"
+            android:layout_height="@dimen/card_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@color/fqBackgroundWhite"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <Button
+                android:id="@+id/preorder_closeButton_countreached"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:background="@mipmap/close_button1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="60dp"
+                android:text="@string/preorder_number_is_reached"
+                android:textColor="@color/fqTheme"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal|top"
+                android:text="@string/you_can_continue_preparations"
+                android:textColor="@color/fqTheme"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/fqTab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/fqBackgroundWhite"
+        android:foregroundTint="@color/colorTertiary"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="@color/colorSecondary"
+        app:tabBackground="@color/fqBackgroundWhite">
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/feed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/queue" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/notification"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/preorder" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/settings"/>
+    </android.support.design.widget.TabLayout>
+</RelativeLayout>

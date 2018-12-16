@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_queue"
+            android:icon="@drawable/baseline_people_black_24dp"
+            android:title="Queue" />
+        <item
+            android:id="@+id/nav_preorder"
+            android:icon="@drawable/baseline_timelapse_black_24dp"
+            android:title="Pre-Order" />
+
+
+    </group>
+
+    <item android:title="Settings">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_menu_settings"
+                android:title="Settings" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/m10"
+    android:background="@color/colorTertiary"
+    android:padding="@dimen/m20">
+
+
+    <TextView
+        android:id="@+id/costumerIdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/m10"
+        android:text="Customer ID: "
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/customer_id"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/costumerIdText"
+        android:textAlignment="inherit"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/orderIdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/costumerIdText"
+        android:layout_marginRight="@dimen/m10"
+        android:text="Order ID: "
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/order_id"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/costumerIdText"
+        android:layout_toRightOf="@+id/orderIdText"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/food_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/order_id"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/takeAwayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/food_name"
+        android:layout_marginRight="@dimen/m10"
+        android:text="Take away: "
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/preOrderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/takeAwayText"
+        android:layout_marginRight="@dimen/m10"
+        android:text="Preorder: "
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/takeaway_bool"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/food_name"
+        android:layout_alignParentRight="false"
+        android:layout_toRightOf="@+id/takeAwayText"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/preorder_bool"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/takeAwayText"
+        android:layout_toRightOf="@+id/preOrderText"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp" />
+
+</RelativeLayout>
